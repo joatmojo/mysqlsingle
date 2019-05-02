@@ -1,0 +1,21 @@
+---
+- include: facts.yml
+
+- include: os_packages.yml
+
+- include: python_packages.yml
+
+- include: zfs_packages.yml
+  when:
+    - zfs_backend
+    - inventory_hostname in groups['mysql-single']
+
+- include: zfs_blocks.yml
+  when:
+    - zfs_backend
+    - inventory_hostname in groups['mysql-single']
+
+- include: zfs_mounts.yml
+  when:
+    - zfs_backend
+    - inventory_hostname in groups['mysql-single']
