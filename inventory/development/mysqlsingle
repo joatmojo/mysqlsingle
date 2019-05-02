@@ -1,2 +1,10 @@
+[all:vars]
+zfs_backend=true
+zfs_block_device=sdb
+zfs_block_wipe=true
+zfs_pool_wipe=true
+zfs_dataset_wipe=true
+zfs_dataset_size=5G
+
 [mysql-single]
-172.10.11.16
+172.10.11.15

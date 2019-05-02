@@ -10,5 +10,5 @@
     - db_password: mojo_pass
 
   roles:
-    - update
+    - common
     - mysql
